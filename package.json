@@ -9,6 +9,7 @@
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
     "bootstrap": "^3.4.1",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "sails": "^1.1.0",
     "sails-hook-apianalytics": "^2.0.3",
     "sails-hook-organics": "^0.15.0",
