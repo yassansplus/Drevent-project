@@ -21,7 +21,8 @@ module.exports.routes = {
 
   '/': { view: 'pages/front/homepage' },
   '/comment-ca-marche': { view: 'pages/front/ccm' },
-
+  'get /signup': { view: 'pages/front/signup' },
+  'post /signup': 'AuthController.signup',
 
   /***************************************************************************
   *                                                                          *

@@ -11,42 +11,15 @@ module.exports = {
             isInteger: true,
             required: true
         },
-        username: {
-            type: "string",
-            columnType: "varchar",
-            maxLength: 180,
-            required: true
-        },
-        username_canonical: {
-            type: "string",
-            columnType: "varchar",
-            maxLength: 180,
-            unique: true,
-            required: true
-        },
         email: {
             type: "string",
             columnType: "varchar",
             maxLength: 180,
             required: true
         },
-        email_canonical: {
-            type: "string",
-            columnType: "varchar",
-            maxLength: 180,
-            unique: true,
-            required: true
-        },
         enabled: {
-            type: "number",
-            columnType: "tinyint",
-            isInteger: true,
-            required: true
-        },
-        salt: {
-            type: "string",
-            columnType: "varchar",
-            maxLength: 255
+            type: "boolean",
+            defaultsTo: false, 
         },
         password: {
             type: "string",
