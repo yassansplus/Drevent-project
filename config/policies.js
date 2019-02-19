@@ -18,5 +18,14 @@ module.exports.policies = {
   ***************************************************************************/
 
   // '*': true,
-
+  AssociationController: {
+    // By default, require requests to come from a logged-in user
+    // (runs the policy in api/policies/isLoggedIn.js)
+    '*': 'authanticated',
+  },
+  AdherantController: {
+    // By default, require requests to come from a logged-in user
+    // (runs the policy in api/policies/isLoggedIn.js)
+    '*': 'authanticated',
+  }
 };

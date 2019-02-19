@@ -19,10 +19,38 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  /*---------FRONT ZONE------------*/
   '/': { view: 'pages/front/homepage' },
   '/comment-ca-marche': { view: 'pages/front/ccm' },
+
+  /*---------FIN FRONT ZONE------------*/
+
+
+  /*-------------LOGIN ZONE-------------*/
+
   'get /signup': { view: 'pages/front/signup' },
   'post /signup': 'AuthController.signup',
+
+  'get /signin': { view: 'pages/front/signin' },
+  'post /signin': 'AuthController.signin',
+
+  /*---------FIN LOGIN ZONE-------------*/
+/*---------- ADHERANT ZONE -------------*/
+'/adherant/creation': 'AdherantController.create',
+'/adherant/:prenom': 'AdherantController.show',
+'/adherant/update/:prenom': 'AdherantController.update',
+'/adherant/delete/:prenom': 'AdherantController.delete',
+
+/*-------FIN ADHERANT ZONE ------------*/
+/*---------- ASSOCIATION ZONE ---------*/
+
+'/association/creation': 'AdherantController.create',
+'/association/:prenom': 'AdherantController.show',
+'/association/update/:prenom': 'AdherantController.update',
+'/association/delete/:prenom': 'AdherantController.delete',
+
+/*--------- FIN ASSOCIATION ZONE -----------*/
+
 
   /***************************************************************************
   *                                                                          *
