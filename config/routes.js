@@ -44,10 +44,10 @@ module.exports.routes = {
 /*-------FIN ADHERANT ZONE ------------*/
 /*---------- ASSOCIATION ZONE ---------*/
 
-'/association/creation': 'AdherantController.create',
-'/association/:prenom': 'AdherantController.show',
-'/association/update/:prenom': 'AdherantController.update',
-'/association/delete/:prenom': 'AdherantController.delete',
+'/association/creation': 'AssociationController.create',
+'/association/:prenom': 'AssociationController.show',
+'/association/update/:prenom': 'AssociationController.update',
+'/association/delete/:prenom': 'AssociationController.delete',
 
 /*--------- FIN ASSOCIATION ZONE -----------*/
 
