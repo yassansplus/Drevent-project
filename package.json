@@ -10,12 +10,14 @@
     "@sailshq/socket.io-redis": "^5.2.0",
     "bootstrap": "^3.4.1",
     "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "moment": "^2.24.0",
     "sails": "^1.1.0",
     "sails-hook-apianalytics": "^2.0.3",
     "sails-hook-organics": "^0.15.0",
     "sails-hook-orm": "^2.1.1",
     "sails-hook-sockets": "^1.5.5",
-    "sails-mysql": "^1.0.1"
+    "sails-mysql": "^1.0.1",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@sailshq/eslint": "^4.19.3",
