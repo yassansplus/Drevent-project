@@ -15,7 +15,7 @@ module.exports = {
         User.findOrCreate({ email: req.body.email }, {
             email: req.body.email,
             name: req.body.nom,
-            surname: req.body.prenom,
+            surname: req.body.prenom, 
             password: md5(req.body.password),
             role: req.body.role,
             myDate: formatDate,
