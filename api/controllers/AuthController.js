@@ -49,17 +49,13 @@ module.exports = {
     });
     if (!user) {
       res.view('pages/front/signin', { erreur: "oops" });
-      // si l'utilisateur n'existe pas
-
-
-
     } else {
       //sinon
 
       req.session.authenticated = true;
       req.session.user = user;
-      sails.log(user.role);
 
+      
       switch (user.role) {
 
         case 'ROLE_ASSOC':

@@ -45,7 +45,16 @@
   </head>
 
   <body>
-    <%- partial('../pages/include/menu.ejs') %>
+    <% if(session.authenticated) { %>
+
+
+      <%- partial('../pages/include/loggedMenu.ejs') %>
+
+    <% }else{ %>
+
+      <%- partial('../pages/include/menu.ejs') %>
+    
+    <% } %>
     <%- body %>
 
 
