@@ -8,6 +8,7 @@
 module.exports = {
     create: async function (req, res) {
         
+        res.view("pages/association/create");
     },
 
     show: async function (req, res) {
