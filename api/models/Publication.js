@@ -22,7 +22,7 @@ module.exports = {
             required: true
         },
         Publication: {
-            type: "string",
+            type: "ref",
             columnType: "datetime",
             required: true
         },

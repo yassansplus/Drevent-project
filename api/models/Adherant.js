@@ -20,10 +20,6 @@ module.exports = {
             columnType: "varchar",
             maxLength: 4
         },
-        birthday: {
-            type: "string",
-            columnType: "date"
-        },
         associations: {
             collection: 'association',
             via: 'adherants'

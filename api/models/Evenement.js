@@ -16,12 +16,12 @@ module.exports = {
             unique: true
           },
         begin: {
-            type: "string",
+            type: "ref",
             columnType: "datetime",
             required: true
         },
         end: {
-            type: "string",
+            type: "ref",
             columnType: "datetime",
             required: true
         }
