@@ -9,11 +9,8 @@ const uuid = require('uuid/v1');
 module.exports = {
     signup: async function (req, res) {
 
-        console.log("----------------------------------------------------")
         let formatDate = await sails.helpers.date.with({ date: req.body.myDate });
-        console.log(formatDate);
 
-        console.log("----------------------------------------------------")
         User.findOrCreate({ email: req.body.email }, {
             email: req.body.email,
             name: req.body.nom,
@@ -35,8 +32,7 @@ module.exports = {
                 }
             });
 
-        console.error(moment().format(req.body.myDate));
-        console.warn(new Date(req.body.myDate));
+
         res.end("ok");
     },
 
