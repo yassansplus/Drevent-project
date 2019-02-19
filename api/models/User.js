@@ -6,11 +6,9 @@
 module.exports = {
     attributes: {
         id: {
-            type: "number",
-            columnType: "int",
-            isInteger: true,
-            required: true
-        },
+            type: 'number',
+            autoIncrement: true
+         },
         email: {
             type: "string",
             columnType: "varchar",
@@ -27,10 +25,6 @@ module.exports = {
             maxLength: 255,
             required: true
         },
-        last_login: {
-            type: "string",
-            columnType: "datetime"
-        },
         confirmation_token: {
             type: "string",
             columnType: "varchar",
@@ -38,10 +32,10 @@ module.exports = {
             unique: true
         },
         password_requested_at: {
-            type: "string",
+            type: "ref",
             columnType: "datetime"
         },
-        roles: {
+        role: {
             type: "string",
             columnType: "longtext",
             required: true
@@ -63,9 +57,8 @@ module.exports = {
             maxLength: 255
         },
         myDate: {
-            type: "string",
+            type: "ref",
             columnType: "datetime",
-            defaultsTo: "CURRENT_TIMESTAMP"
         },
         association: {
             collection:'association',
