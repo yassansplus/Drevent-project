@@ -6,6 +6,7 @@
  */
 const moment = require('moment');
 const uuid = require('uuid/v1');
+const md5 = require("md5");
 module.exports = {
     signup: async function (req, res) {
 
@@ -15,7 +16,7 @@ module.exports = {
             email: req.body.email,
             name: req.body.nom,
             surname: req.body.prenom,
-            password: req.body.password,
+            password: md5(req.body.password),
             role: req.body.role,
             myDate: formatDate,
             confirmation_token: uuid()
