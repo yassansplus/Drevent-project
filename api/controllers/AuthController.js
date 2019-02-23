@@ -33,7 +33,7 @@ module.exports = {
           sails.log('Created a new user: ' + user.name);
         }
         else {
-          //sinon
+          //sinon il n'existe pas 
           sails.log('Found existing user: ' + user.name);
         }
       });
@@ -46,12 +46,13 @@ module.exports = {
     let user = await User.findOne({
       email: req.body.email,
       password: md5(req.body.password)
-    });
+    }).populate("association").populate('adherant');
     if (!user) {
       res.view('pages/front/signin', { erreur: "oops" });
     } else {
       //sinon
-
+ 
+      
       req.session.authenticated = true;
       req.session.user = user;
 
@@ -65,7 +66,7 @@ module.exports = {
           res.redirect("/adherant/creation");
           break;
         case 'ROLE_ASSOC_OK':
-          res.redirect("/association/");
+          res.redirect("/association");
           break;
         case 'ROLE_ADH_OK':
           res.redirect("/adherant");

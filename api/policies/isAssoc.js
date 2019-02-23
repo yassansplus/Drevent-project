@@ -6,8 +6,8 @@ module.exports = async function (req, res, proceed) {
   // > For more about where `req.me` comes from, check out this app's
   // > custom hook (`api/hooks/custom/index.js`).
 
-  if (req.session.authenticated && (req.session.user.role == "ROLE_ASSOC" || req.session.user.role == "ROLE_ASSOC")) {
-    
+  if (req.session.authenticated && (req.session.user.role == "ROLE_ASSOC_OK" || req.session.user.role == "ROLE_ASSOC")) {
+     
     return proceed();
     
   }

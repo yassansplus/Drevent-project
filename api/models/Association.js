@@ -6,11 +6,9 @@
 module.exports = {
     attributes: {
         id: {
-            type: "number",
-            columnType: "int",
-            isInteger: true,
-            required: true
-        },
+            type: 'number',
+            autoIncrement: true
+         },
         name: {
             type: "string",
             columnType: "varchar",
