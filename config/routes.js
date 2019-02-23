@@ -45,7 +45,7 @@ module.exports.routes = {
 /*---------- ASSOCIATION ZONE ---------*/
 
 '/association/creation': 'AssociationController.create',
-'/association/:prenom': 'AssociationController.show',
+'/association': 'AssociationController.show',
 '/association/update/:prenom': 'AssociationController.update',
 '/association/delete/:prenom': 'AssociationController.delete',
 
